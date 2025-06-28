@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Well Soon Manya ❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-image: url('manya.jpg'); /* Replace with final image URL */
+      background-size: cover;
+      background-position: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+      backdrop-filter: brightness(0.7);
+    }
+    h1 {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    p {
+      font-size: 1.4rem;
+      color: white;
+      max-width: 700px;
+      animation: fadeIn 4s ease-in-out;
+    }
+    .heart {
+      width: 100px;
+      height: 90px;
+      background: red;
+      position: relative;
+      transform: rotate(-45deg);
+      margin-top: 30px;
+      animation: beat 1s infinite;
+    }
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart:before {
+      top: -50px;
+      left: 0;
+    }
+    .heart:after {
+      left: 50px;
+      top: 0;
+    }
+    @keyframes beat {
+      0%, 100% { transform: scale(1) rotate(-45deg); }
+      50% { transform: scale(1.1) rotate(-45deg); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .petals {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .petal {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+      animation: fall 8s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-20px) translateX(0); opacity: 1; }
+      100% { transform: translateY(100vh) translateX(100px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Get Well Soon Manya ❤️</h1>
+  <p>Manya, tu sirf meri muskaan hi nahi, balki meri strength bhi hai.<br>
+     Har mushkil ke baad ek nayi subah aati hai,<br>
+     aur tu us subah se bhi zyada khoobsurat hai.<br>
+     Jaldi se theek ho ja, kyunki mera har din sirf tere naam se shuru hota hai. 💖</p>
+  <div class="heart"></div>
+  <div class="petals">
+    <div class="petal" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="petal" style="left: 25%; animation-delay: 1s;"></div>
+    <div class="petal" style="left: 40%; animation-delay: 2s;"></div>
+    <div class="petal" style="left: 55%; animation-delay: 3s;"></div>
+    <div class="petal" style="left: 70%; animation-delay: 4s;"></div>
+    <div class="petal" style="left: 85%; animation-delay: 5s;"></div>
+  </div>
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
